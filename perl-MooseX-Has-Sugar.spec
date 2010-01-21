@@ -10,13 +10,13 @@
 %define		pnam	Has-Sugar
 Summary:	MooseX::Has-Sugar - Sugar Syntax for moose 'has' fields
 Name:		perl-MooseX-Has-Sugar
-Version:	0.0404
+Version:	0.0405
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MooseX/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	d691f955b037de588040f0ff19613338
+# Source0-md5:	28430d88a74564cc09236e020653ff0d
 URL:		http://search.cpan.org/dist/MooseX-Has-Sugar/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -37,18 +37,19 @@ Sugar Syntax for moose 'has' fields.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Makefile.PL \
-	INSTALLDIRS=vendor
+%{__perl} Build.PL \
+	--prefix="%{_prefix}" \
+	--installdirs="vendor"
 
-%{__make}
+%{__perl} Build
 
-%{?with_tests:%{__make} test}
+%{?with_tests:%{__perl} Build test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} pure_install \
-	DESTDIR=$RPM_BUILD_ROOT
+%{__perl} Build install \
+	--destdir=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
