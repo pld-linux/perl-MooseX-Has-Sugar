@@ -15,7 +15,7 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/MooseX/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/K/KE/KENTNL/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3504c457cee4a337fbded2af327b9f9b
 URL:		http://search.cpan.org/dist/MooseX-Has-Sugar/
 BuildRequires:	perl-devel >= 1:5.8.0
