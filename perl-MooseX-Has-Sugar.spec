@@ -1,22 +1,23 @@
 #
 # TODO:	- pl
+#	- fix build with tests (backwards compatibility)
 #
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
-%bcond_without	tests		# do not perform "make test"
+%bcond_with	tests		# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	MooseX
 %define		pnam	Has-Sugar
 Summary:	MooseX::Has-Sugar - Sugar Syntax for moose 'has' fields
 Name:		perl-MooseX-Has-Sugar
-Version:	0.05046611
-Release:	1
+Version:	0.05055616
+Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/K/KE/KENTNL/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	c4c51df69741d8aa2f9d201681c600e0
+# Source0-md5:	31d53c017f929083ac30f01dcd85cece
 URL:		http://search.cpan.org/dist/MooseX-Has-Sugar/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
