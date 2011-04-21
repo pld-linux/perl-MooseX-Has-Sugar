@@ -11,13 +11,13 @@
 %define		pnam	Has-Sugar
 Summary:	MooseX::Has-Sugar - Sugar Syntax for moose 'has' fields
 Name:		perl-MooseX-Has-Sugar
-Version:	0.05055616
+Version:	0.05070419
 Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://search.cpan.org/CPAN/authors/id/K/KE/KENTNL/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	31d53c017f929083ac30f01dcd85cece
+# Source0-md5:	4208e85e65b568707e91b45552347b44
 URL:		http://search.cpan.org/dist/MooseX-Has-Sugar/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
