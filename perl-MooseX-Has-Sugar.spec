@@ -1,7 +1,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	MooseX
 %define		pnam	Has-Sugar
 Summary:	MooseX::Has::Sugar - Sugar Syntax for moose 'has' fields
